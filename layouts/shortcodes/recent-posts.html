@@ -3,7 +3,7 @@
 {{- $sections := default (slice "posts") .Page.Site.Params.mainSections -}}
 {{- $posts := where .Page.Site.RegularPages "Section" "in" $sections -}}
 
-<h2>{{ $title }}</h2>
+<h3>{{ $title }}</h3>
 <ul>
   {{- range first (int $limit) ($posts.ByDate.Reverse) -}}
   <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
